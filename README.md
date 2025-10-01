@@ -20,7 +20,8 @@ A modern, responsive dashboard built with Next.js and Redux Toolkit for monitori
 - **Redux State Management**: Centralized state with Redux Toolkit and async thunks
 - **TypeScript**: Full type safety throughout the application
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Component Architecture**: Reusable, DRY components for maintainability
+- **Modular Architecture**: Well-organized components, utilities, and icons
+- **DRY Principles**: Reusable components and centralized helper functions
 
 ## Tech Stack
 
@@ -67,22 +68,44 @@ A modern, responsive dashboard built with Next.js and Redux Toolkit for monitori
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000) to view the dashboard.
 
+### Generating Sample Data
+
+The project includes a Python script to generate realistic sample data:
+
+```bash
+python seed.py
+```
+
+This will create `mock-data.json` with sample security analytics data for testing and development.
+
 ## Project Structure
 
 ```
 src/
 ├── app/
-│   ├── stores/                    # Redux store configuration
-│   │   ├── githubInfoStore.ts    # Main Redux slice with async thunks
-│   │   ├── store.ts              # Store configuration
-│   │   └── hooks.ts              # Typed Redux hooks
-│   ├── github-security-dashboard.tsx  # Main dashboard component
-│   ├── providers.tsx             # Redux Provider wrapper
-│   ├── layout.tsx                # Root layout with providers
-│   └── page.tsx                  # Home page
+│   ├── components/               # Reusable UI components
+│   │   ├── icons.tsx            # SVG icon components
+│   │   ├── MetricCard.tsx       # Summary metrics card
+│   │   ├── VulnerabilityCard.tsx # Vulnerability breakdown card
+│   │   ├── RepositoryCard.tsx   # Repository overview card
+│   │   ├── RiskyRepositoryItem.tsx # Risky repository list item
+│   │   ├── PRCard.tsx           # Individual PR card
+│   │   ├── PRList.tsx           # PR list with filtering
+│   │   └── PRModal.tsx          # Modal for PR details
+│   ├── utils/                   # Utility functions
+│   │   └── utilities.ts         # Risk calculation helpers
+│   ├── stores/                  # Redux store configuration
+│   │   ├── githubInfoStore.ts   # Main Redux slice with async thunks
+│   │   ├── store.ts             # Store configuration
+│   │   └── hooks.ts             # Typed Redux hooks
+│   ├── GithubSecurityDashboard.tsx # Main dashboard component
+│   ├── providers.tsx            # Redux Provider wrapper
+│   ├── layout.tsx               # Root layout with providers
+│   └── page.tsx                 # Home page
 ├── public/
-│   └── mock-data.json            # Sample security analytics data
-└── globals.css                   # Global styles and Tailwind imports
+│   └── mock-data.json           # Sample security analytics data
+├── seed.py                      # Python script to generate mock data
+└── globals.css                  # Global styles and Tailwind imports
 ```
 
 ## Data Structure
@@ -144,27 +167,48 @@ interface GitHubData {
 }
 ```
 
-## Redux Store
+## Architecture
 
+### Redux Store
 The application uses Redux Toolkit for state management with the following structure:
 
-- **State**: `{ githubInfo: { data, loading, error } }`
-- **Actions**: `loadGitHubData` (async thunk)
-- **Selectors**: Typed selectors for data access
-- **Reducers**: Handles loading, success, and error states
+- **State**: `{ githubInfo: { data, loading, error, modal } }`
+- **Actions**: `loadGitHubData` (async thunk), `openPRModal`, `closePRModal`
+- **Selectors**: Typed selectors for data access and modal state
+- **Reducers**: Handles loading, success, error, and modal states
+
+### Component Organization
+- **Card Components**: Modular, reusable cards for different data types
+- **Utility Functions**: Centralized helper functions for risk calculations
+- **Icon Components**: SVG icons organized in a dedicated file
+- **Modal System**: Reusable modal for detailed PR views
+
+### File Organization Benefits
+- **Easy Navigation**: Clear folder structure makes finding files intuitive
+- **Maintainability**: Changes to specific features are isolated to relevant files
+- **Reusability**: Components and utilities can be easily imported anywhere
+- **Scalability**: New features can be added without cluttering existing files
+- **Team Collaboration**: Clear separation of concerns reduces merge conflicts
 
 ## Customization
 
 ### Adding New Metrics
 1. Update the `GitHubData` interface in `githubInfoStore.ts`
 2. Add new selectors for the data
-3. Create new components or extend existing ones
+3. Create new components in the `components/` directory
 4. Update the dashboard layout
 
+### Adding New Components
+1. Create component file in `src/app/components/`
+2. Follow existing patterns for props and styling
+3. Import and use in the main dashboard
+4. Add any new utility functions to `utils/utilities.ts`
+
 ### Styling
-- Modify Tailwind classes in components
-- Update gradient configurations in the data arrays
+- Modify Tailwind classes in individual component files
+- Update gradient configurations in the dashboard data arrays
 - Customize colors in the `vulnerabilityCards` and `metricCards` arrays
+- Add new icons to `components/icons.tsx`
 
 ### Data Source
 Replace the mock data by:
@@ -184,11 +228,13 @@ Replace the mock data by:
 ### Code Quality
 
 The project follows these principles:
-- **DRY (Don't Repeat Yourself)**: Reusable components and utilities
-- **Type Safety**: Full TypeScript coverage
-- **Component Composition**: Small, focused components
-- **Responsive Design**: Mobile-first approach
+- **DRY (Don't Repeat Yourself)**: Reusable components and centralized utilities
+- **Type Safety**: Full TypeScript coverage with proper interfaces
+- **Modular Architecture**: Well-organized file structure with clear separation of concerns
+- **Component Composition**: Small, focused, single-responsibility components
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
 - **Accessibility**: Semantic HTML and proper ARIA labels
+- **Maintainability**: Easy to modify and extend with clear file organization
 
 ## Contributing
 

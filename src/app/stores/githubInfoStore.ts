@@ -84,12 +84,20 @@ interface GitHubInfoState {
   data: GitHubData | null;
   loading: boolean;
   error: string | null;
+  modal: {
+    isOpen: boolean;
+    selectedRepository: Repository | null;
+  };
 }
 
 const initialState: GitHubInfoState = {
   data: null,
   loading: false,
   error: null,
+  modal: {
+    isOpen: false,
+    selectedRepository: null,
+  },
 };
 
 // Async thunk to load mock data
@@ -97,17 +105,13 @@ export const loadGitHubData = createAsyncThunk(
   'githubInfo/loadData',
   async () => {
     try {
-      console.log('Fetching mock data from /mock-data.json...');
       const response = await fetch('/mock-data.json');
-      console.log('Response status:', response.status);
       if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.status}`);
       }
       const data: GitHubData = await response.json();
-      console.log('Data loaded successfully:', data);
       return data;
     } catch (error) {
-      console.error('Error loading GitHub data:', error);
       throw new Error(`Failed to load GitHub data: ${error}`);
     }
   }
@@ -156,6 +160,14 @@ const githubInfoSlice = createSlice({
         }
       }
     },
+    openPRModal: (state, action: PayloadAction<Repository>) => {
+      state.modal.isOpen = true;
+      state.modal.selectedRepository = action.payload;
+    },
+    closePRModal: (state) => {
+      state.modal.isOpen = false;
+      state.modal.selectedRepository = null;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -175,7 +187,7 @@ const githubInfoSlice = createSlice({
   },
 });
 
-export const { clearError, updateRepositoryRisk, updatePullRequestStatus } = githubInfoSlice.actions;
+export const { clearError, updateRepositoryRisk, updatePullRequestStatus, openPRModal, closePRModal } = githubInfoSlice.actions;
 
 // Selectors
 export const selectGitHubData = (state: { githubInfo: GitHubInfoState }) => state.githubInfo.data;
@@ -205,5 +217,9 @@ export const selectCriticalVulnerabilities = (state: { githubInfo: GitHubInfoSta
 
 export const selectRiskiestRepositories = (state: { githubInfo: GitHubInfoState }) =>
   state.githubInfo.data?.summary_analytics.riskiest_repositories || [];
+
+export const selectModalState = (state: { githubInfo: GitHubInfoState }) => state.githubInfo.modal;
+export const selectIsModalOpen = (state: { githubInfo: GitHubInfoState }) => state.githubInfo.modal.isOpen;
+export const selectSelectedRepository = (state: { githubInfo: GitHubInfoState }) => state.githubInfo.modal.selectedRepository;
 
 export default githubInfoSlice.reducer;
