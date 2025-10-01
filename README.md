@@ -1,5 +1,7 @@
 # GitHub Security Analytics Dashboard
 
+<img width="735" alt="image" src="https://github.com/user-attachments/assets/0c78b181-4898-4a75-8c52-96d62d68f104" />
+
 A modern, responsive dashboard built with Next.js and Redux Toolkit for monitoring security vulnerabilities across GitHub repositories. This application provides comprehensive analytics and insights into pull request security risks, vulnerability breakdowns, and repository risk assessments.
 
 ## Features
