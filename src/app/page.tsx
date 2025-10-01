@@ -1,4 +1,4 @@
-import GitHubSecurityDashboard from "./github-security-dashboard";
+import GitHubSecurityDashboard from "@/app/GithubSecurityDashboard";
 
 export default function Home() {
   return <GitHubSecurityDashboard />;
