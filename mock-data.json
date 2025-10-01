@@ -1,0 +1,3014 @@
+{
+  "summary_analytics": {
+    "total_repositories": 8,
+    "total_pull_requests": 75,
+    "open_prs_with_vulnerabilities": 38,
+    "vulnerability_counts": {
+      "Critical": 14,
+      "High": 24,
+      "Medium": 19,
+      "Low": 16
+    },
+    "riskiest_repositories": [
+      {
+        "name": "auth-pipeline",
+        "risk_score": 83
+      },
+      {
+        "name": "api-engine",
+        "risk_score": 70
+      },
+      {
+        "name": "auth-handler",
+        "risk_score": 66
+      }
+    ]
+  },
+  "repositories": [
+    {
+      "id": 8225622,
+      "name": "api-engine",
+      "full_name": "secure-corp/api-engine",
+      "html_url": "https://github.com/secure-corp/api-engine",
+      "private": false,
+      "pull_requests": [
+        {
+          "id": 848900,
+          "number": 101,
+          "title": "Fix user authentication",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/114",
+          "user": {
+            "login": "bwhite",
+            "id": 54540,
+            "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+            "html_url": "https://github.com/bwhite"
+          },
+          "created_at": "2025-07-08T05:28:06.622597Z",
+          "additions": 84,
+          "deletions": 88,
+          "assignees": [
+            {
+              "login": "bwhite",
+              "id": 42777,
+              "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+              "html_url": "https://github.com/bwhite"
+            }
+          ],
+          "risk_score": 6,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "ee15f8ee-d0fb-4e60-ab7a-4e943d944ef6",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/user/util/handler.py",
+              "line_number": 81,
+              "comment_created_at": "2025-07-08T23:48:06.622597Z"
+            },
+            {
+              "id": "ecbd062c-8d45-454c-9f7f-1d6c5fe45eed",
+              "severity": "High",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/api/util/pipeline.py",
+              "line_number": 152,
+              "comment_created_at": "2025-07-08T12:17:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 457728,
+          "number": 102,
+          "title": "Refactor user authentication",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/116",
+          "user": {
+            "login": "asmith",
+            "id": 17754,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-08T20:24:06.622597Z",
+          "additions": 120,
+          "deletions": 158,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 67189,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "057bed7a-ee5c-47c9-bacc-84d83c7178d7",
+              "severity": "Medium",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/api/util/gateway.py",
+              "line_number": 153,
+              "comment_created_at": "2025-07-10T11:45:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 356221,
+          "number": 103,
+          "title": "Refactor database schema",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/117",
+          "user": {
+            "login": "asmith",
+            "id": 63167,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-06T20:06:06.622597Z",
+          "additions": 149,
+          "deletions": 148,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 68616,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 434871,
+          "number": 104,
+          "title": "Remove API endpoint",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/119",
+          "user": {
+            "login": "dev-lead",
+            "id": 96576,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-07T13:57:06.622597Z",
+          "additions": 234,
+          "deletions": 98,
+          "assignees": [
+            {
+              "login": "r-chen",
+              "id": 77780,
+              "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+              "html_url": "https://github.com/r-chen"
+            }
+          ],
+          "risk_score": 3,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "1da9581c-7075-40b1-a3ba-412aaf5c0d32",
+              "severity": "Medium",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/auth/util/gateway.py",
+              "line_number": 93,
+              "comment_created_at": "2025-07-09T13:10:06.622597Z"
+            },
+            {
+              "id": "3700768f-9609-4ec5-bd98-334720550ca2",
+              "severity": "Low",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/auth/util/gateway.py",
+              "line_number": 149,
+              "comment_created_at": "2025-07-07T16:26:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 901069,
+          "number": 105,
+          "title": "Fix caching layer",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/133",
+          "user": {
+            "login": "kblack",
+            "id": 60791,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-08T09:34:06.622597Z",
+          "additions": 203,
+          "deletions": 113,
+          "assignees": [
+            {
+              "login": "mgreen",
+              "id": 51709,
+              "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+              "html_url": "https://github.com/mgreen"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 648553,
+          "number": 106,
+          "title": "Refactor database schema",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/139",
+          "user": {
+            "login": "r-chen",
+            "id": 43829,
+            "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+            "html_url": "https://github.com/r-chen"
+          },
+          "created_at": "2025-07-04T04:03:06.622597Z",
+          "additions": 426,
+          "deletions": 13,
+          "assignees": [
+            {
+              "login": "asmith",
+              "id": 12125,
+              "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+              "html_url": "https://github.com/asmith"
+            }
+          ],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "455c8128-79a8-4e5b-b117-6b1435707816",
+              "severity": "Medium",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/infra/util/core.py",
+              "line_number": 35,
+              "comment_created_at": "2025-07-04T16:17:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 807069,
+          "number": 107,
+          "title": "Improve database schema",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/150",
+          "user": {
+            "login": "asmith",
+            "id": 26073,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-03T06:19:06.622597Z",
+          "additions": 163,
+          "deletions": 2,
+          "assignees": [
+            {
+              "login": "jdoe",
+              "id": 44820,
+              "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+              "html_url": "https://github.com/jdoe"
+            }
+          ],
+          "risk_score": 10,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "4db914e5-06df-4b5f-8dcf-ee85b8681cb1",
+              "severity": "Critical",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/user/util/service.py",
+              "line_number": 46,
+              "comment_created_at": "2025-07-05T04:14:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 340405,
+          "number": 108,
+          "title": "Fix API endpoint",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/155",
+          "user": {
+            "login": "dev-lead",
+            "id": 42665,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-07T14:39:06.622597Z",
+          "additions": 266,
+          "deletions": 186,
+          "assignees": [
+            {
+              "login": "kblack",
+              "id": 88571,
+              "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+              "html_url": "https://github.com/kblack"
+            }
+          ],
+          "risk_score": 8,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "4d025543-4b65-4d85-bd3f-f8b6e83f04cd",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/user/util/pipeline.py",
+              "line_number": 198,
+              "comment_created_at": "2025-07-09T09:58:06.622597Z"
+            },
+            {
+              "id": "37138cc6-0497-4b2f-a201-033fc7fc48cc",
+              "severity": "Medium",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/auth/util/service.py",
+              "line_number": 132,
+              "comment_created_at": "2025-07-08T02:37:06.622597Z"
+            },
+            {
+              "id": "4f101c40-d81c-4dc1-b264-de1edbb9060a",
+              "severity": "High",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/search/util/engine.py",
+              "line_number": 197,
+              "comment_created_at": "2025-07-08T18:10:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 449025,
+          "number": 109,
+          "title": "Refactor API endpoint",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/160",
+          "user": {
+            "login": "bwhite",
+            "id": 78653,
+            "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+            "html_url": "https://github.com/bwhite"
+          },
+          "created_at": "2025-07-04T05:01:06.622597Z",
+          "additions": 54,
+          "deletions": 146,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 45115,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 20,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "d7de8cad-c701-4da1-b685-682c523a7c9f",
+              "severity": "Critical",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/notification/util/engine.py",
+              "line_number": 117,
+              "comment_created_at": "2025-07-05T01:40:06.622597Z"
+            },
+            {
+              "id": "7ac98a79-153c-441c-8163-f75aea45ecb3",
+              "severity": "Critical",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/infra/util/engine.py",
+              "line_number": 129,
+              "comment_created_at": "2025-07-05T12:57:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 135700,
+          "number": 110,
+          "title": "Fix caching layer",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/167",
+          "user": {
+            "login": "dev-lead",
+            "id": 78757,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-07T19:04:06.622597Z",
+          "additions": 115,
+          "deletions": 38,
+          "assignees": [],
+          "risk_score": 3,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "57479aae-0822-4ce4-a71f-50902499c2f9",
+              "severity": "Low",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/search/util/engine.py",
+              "line_number": 163,
+              "comment_created_at": "2025-07-08T18:12:06.622597Z"
+            },
+            {
+              "id": "afe005c1-af10-4c1a-808e-92fc709abba2",
+              "severity": "Medium",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/api/util/manager.py",
+              "line_number": 126,
+              "comment_created_at": "2025-07-08T23:52:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 885255,
+          "number": 111,
+          "title": "Add API endpoint",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/169",
+          "user": {
+            "login": "kblack",
+            "id": 53902,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-03T11:38:06.622597Z",
+          "additions": 204,
+          "deletions": 174,
+          "assignees": [],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 491055,
+          "number": 112,
+          "title": "Improve database schema",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/api-engine/pull/175",
+          "user": {
+            "login": "r-chen",
+            "id": 68011,
+            "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+            "html_url": "https://github.com/r-chen"
+          },
+          "created_at": "2025-07-06T22:21:06.622597Z",
+          "additions": 370,
+          "deletions": 115,
+          "assignees": [],
+          "risk_score": 16,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "853fba0a-28af-4358-ae47-e4285931e7b7",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/notification/util/service.py",
+              "line_number": 177,
+              "comment_created_at": "2025-07-08T16:47:06.622597Z"
+            },
+            {
+              "id": "2e8a0185-91b8-430f-b8e0-cfe18ba2966a",
+              "severity": "High",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/notification/util/gateway.py",
+              "line_number": 120,
+              "comment_created_at": "2025-07-07T15:18:06.622597Z"
+            },
+            {
+              "id": "9ac4e6e3-107a-41c7-b2c7-506597893710",
+              "severity": "Critical",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/api/util/service.py",
+              "line_number": 167,
+              "comment_created_at": "2025-07-07T10:38:06.622597Z"
+            }
+          ]
+        }
+      ],
+      "analytics": {
+        "total_prs": 12,
+        "open_prs_with_vulnerabilities": 5,
+        "risk_score": 70,
+        "vulnerability_counts": {
+          "Critical": 1,
+          "High": 3,
+          "Medium": 3,
+          "Low": 4
+        }
+      }
+    },
+    {
+      "id": 9165526,
+      "name": "api-manager",
+      "full_name": "secure-corp/api-manager",
+      "html_url": "https://github.com/secure-corp/api-manager",
+      "private": true,
+      "pull_requests": [
+        {
+          "id": 603823,
+          "number": 101,
+          "title": "Update caching layer",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/api-manager/pull/102",
+          "user": {
+            "login": "mgreen",
+            "id": 76645,
+            "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+            "html_url": "https://github.com/mgreen"
+          },
+          "created_at": "2025-07-04T16:46:06.622597Z",
+          "additions": 81,
+          "deletions": 161,
+          "assignees": [
+            {
+              "login": "asmith",
+              "id": 20719,
+              "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+              "html_url": "https://github.com/asmith"
+            }
+          ],
+          "risk_score": 10,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "6222963c-541d-40d7-afe7-1b2602249903",
+              "severity": "Critical",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/api/util/service.py",
+              "line_number": 91,
+              "comment_created_at": "2025-07-05T22:41:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 690790,
+          "number": 102,
+          "title": "Update database schema",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/api-manager/pull/109",
+          "user": {
+            "login": "kblack",
+            "id": 93338,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-07T07:47:06.622597Z",
+          "additions": 439,
+          "deletions": 95,
+          "assignees": [],
+          "risk_score": 10,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "9523d634-2ec7-4302-b4b6-771355774d2f",
+              "severity": "Critical",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/infra/util/gateway.py",
+              "line_number": 159,
+              "comment_created_at": "2025-07-07T11:23:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 816682,
+          "number": 103,
+          "title": "Add API endpoint",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/api-manager/pull/128",
+          "user": {
+            "login": "kblack",
+            "id": 62204,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-03T16:16:06.622597Z",
+          "additions": 307,
+          "deletions": 91,
+          "assignees": [
+            {
+              "login": "kblack",
+              "id": 47648,
+              "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+              "html_url": "https://github.com/kblack"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 403780,
+          "number": 104,
+          "title": "Implement caching layer",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/api-manager/pull/131",
+          "user": {
+            "login": "bwhite",
+            "id": 11304,
+            "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+            "html_url": "https://github.com/bwhite"
+          },
+          "created_at": "2025-07-03T13:12:06.622597Z",
+          "additions": 213,
+          "deletions": 27,
+          "assignees": [
+            {
+              "login": "mgreen",
+              "id": 67667,
+              "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+              "html_url": "https://github.com/mgreen"
+            }
+          ],
+          "risk_score": 20,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "dd2c5c1d-7e24-4403-ae5b-0c756cd75721",
+              "severity": "Critical",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/search/util/gateway.py",
+              "line_number": 43,
+              "comment_created_at": "2025-07-05T07:09:06.622597Z"
+            },
+            {
+              "id": "fae991c5-8f41-4c24-b419-cf72e43f69d6",
+              "severity": "Critical",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/auth/util/core.py",
+              "line_number": 104,
+              "comment_created_at": "2025-07-04T08:40:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 299404,
+          "number": 105,
+          "title": "Update database schema",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/api-manager/pull/172",
+          "user": {
+            "login": "r-chen",
+            "id": 38515,
+            "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+            "html_url": "https://github.com/r-chen"
+          },
+          "created_at": "2025-07-05T09:52:06.622597Z",
+          "additions": 475,
+          "deletions": 94,
+          "assignees": [
+            {
+              "login": "jdoe",
+              "id": 99970,
+              "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+              "html_url": "https://github.com/jdoe"
+            }
+          ],
+          "risk_score": 15,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "f609e9e8-f439-46ea-8118-dcdda89a9b2b",
+              "severity": "Critical",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/data/util/engine.py",
+              "line_number": 102,
+              "comment_created_at": "2025-07-06T21:46:06.622597Z"
+            },
+            {
+              "id": "f6835a75-3976-4171-8b49-62f76d4f6b68",
+              "severity": "High",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/notification/util/pipeline.py",
+              "line_number": 174,
+              "comment_created_at": "2025-07-05T15:37:06.622597Z"
+            }
+          ]
+        }
+      ],
+      "analytics": {
+        "total_prs": 5,
+        "open_prs_with_vulnerabilities": 2,
+        "risk_score": 55,
+        "vulnerability_counts": {
+          "Critical": 2,
+          "High": 1,
+          "Medium": 0,
+          "Low": 0
+        }
+      }
+    },
+    {
+      "id": 2696681,
+      "name": "auth-handler",
+      "full_name": "secure-corp/auth-handler",
+      "html_url": "https://github.com/secure-corp/auth-handler",
+      "private": false,
+      "pull_requests": [
+        {
+          "id": 742572,
+          "number": 101,
+          "title": "Remove API endpoint",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/104",
+          "user": {
+            "login": "jdoe",
+            "id": 59276,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-07T03:59:06.622597Z",
+          "additions": 213,
+          "deletions": 78,
+          "assignees": [
+            {
+              "login": "kblack",
+              "id": 78657,
+              "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+              "html_url": "https://github.com/kblack"
+            }
+          ],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "6f46cc98-c534-4fec-8c58-5e2df804f900",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/payment/util/service.py",
+              "line_number": 53,
+              "comment_created_at": "2025-07-07T16:13:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 299230,
+          "number": 102,
+          "title": "Fix database schema",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/110",
+          "user": {
+            "login": "asmith",
+            "id": 41427,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-03T05:06:06.622597Z",
+          "additions": 226,
+          "deletions": 161,
+          "assignees": [
+            {
+              "login": "s-kim",
+              "id": 76584,
+              "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+              "html_url": "https://github.com/s-kim"
+            }
+          ],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "83700ce2-38e2-4e0e-8ff5-7574159bd9a9",
+              "severity": "High",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/user/util/handler.py",
+              "line_number": 160,
+              "comment_created_at": "2025-07-04T00:38:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 116223,
+          "number": 103,
+          "title": "Refactor database schema",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/118",
+          "user": {
+            "login": "r-chen",
+            "id": 56603,
+            "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+            "html_url": "https://github.com/r-chen"
+          },
+          "created_at": "2025-07-04T07:03:06.622597Z",
+          "additions": 52,
+          "deletions": 13,
+          "assignees": [],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 659681,
+          "number": 104,
+          "title": "Fix login logic",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/122",
+          "user": {
+            "login": "dev-lead",
+            "id": 76135,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-08T18:30:06.622597Z",
+          "additions": 319,
+          "deletions": 132,
+          "assignees": [
+            {
+              "login": "s-kim",
+              "id": 27264,
+              "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+              "html_url": "https://github.com/s-kim"
+            }
+          ],
+          "risk_score": 15,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "e616e36c-61ef-4833-9433-cf055ee108b1",
+              "severity": "High",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/search/util/manager.py",
+              "line_number": 155,
+              "comment_created_at": "2025-07-10T03:09:06.622597Z"
+            },
+            {
+              "id": "4f738326-ff6b-49a1-ba53-127a0dd084c5",
+              "severity": "Critical",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/auth/util/gateway.py",
+              "line_number": 20,
+              "comment_created_at": "2025-07-08T19:46:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 497143,
+          "number": 105,
+          "title": "Add database schema",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/129",
+          "user": {
+            "login": "dev-lead",
+            "id": 77782,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-04T01:33:06.622597Z",
+          "additions": 155,
+          "deletions": 33,
+          "assignees": [
+            {
+              "login": "kblack",
+              "id": 36965,
+              "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+              "html_url": "https://github.com/kblack"
+            }
+          ],
+          "risk_score": 10,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "eb24eaaa-8e31-4555-ac87-39083ec02a66",
+              "severity": "Critical",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/search/util/engine.py",
+              "line_number": 109,
+              "comment_created_at": "2025-07-05T23:52:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 611404,
+          "number": 106,
+          "title": "Implement API endpoint",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/148",
+          "user": {
+            "login": "dev-lead",
+            "id": 48757,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-03T10:56:06.622597Z",
+          "additions": 246,
+          "deletions": 107,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 46830,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 483124,
+          "number": 107,
+          "title": "Add login logic",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/154",
+          "user": {
+            "login": "jdoe",
+            "id": 17299,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-06T10:16:06.622597Z",
+          "additions": 217,
+          "deletions": 27,
+          "assignees": [
+            {
+              "login": "jdoe",
+              "id": 70344,
+              "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+              "html_url": "https://github.com/jdoe"
+            }
+          ],
+          "risk_score": 22,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "f24d2891-728d-4554-b1c6-086b122e6676",
+              "severity": "Critical",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/auth/util/handler.py",
+              "line_number": 151,
+              "comment_created_at": "2025-07-08T06:47:06.622597Z"
+            },
+            {
+              "id": "57422931-f909-4d35-8e11-bc4c30f9e016",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/search/util/gateway.py",
+              "line_number": 89,
+              "comment_created_at": "2025-07-07T04:08:06.622597Z"
+            },
+            {
+              "id": "6d75384c-8863-43d6-9b5d-31bf241c1c40",
+              "severity": "Medium",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/notification/util/service.py",
+              "line_number": 22,
+              "comment_created_at": "2025-07-07T22:50:06.622597Z"
+            },
+            {
+              "id": "583730a5-be4c-47a6-99e8-aa85ca237213",
+              "severity": "High",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/notification/util/engine.py",
+              "line_number": 64,
+              "comment_created_at": "2025-07-07T19:31:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 910118,
+          "number": 108,
+          "title": "Improve database schema",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/158",
+          "user": {
+            "login": "bwhite",
+            "id": 42894,
+            "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+            "html_url": "https://github.com/bwhite"
+          },
+          "created_at": "2025-07-03T06:54:06.622597Z",
+          "additions": 385,
+          "deletions": 10,
+          "assignees": [
+            {
+              "login": "mgreen",
+              "id": 31926,
+              "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+              "html_url": "https://github.com/mgreen"
+            }
+          ],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "d584ef92-dd74-4061-8716-3c4e66d1cf62",
+              "severity": "Low",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/payment/util/gateway.py",
+              "line_number": 186,
+              "comment_created_at": "2025-07-03T17:06:06.622597Z"
+            },
+            {
+              "id": "684afc5e-d8df-4489-b8a6-f1b683602898",
+              "severity": "Low",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/payment/util/proxy.py",
+              "line_number": 41,
+              "comment_created_at": "2025-07-04T20:27:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 906920,
+          "number": 109,
+          "title": "Update user authentication",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/159",
+          "user": {
+            "login": "jdoe",
+            "id": 22346,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-04T09:43:06.622597Z",
+          "additions": 105,
+          "deletions": 152,
+          "assignees": [
+            {
+              "login": "bwhite",
+              "id": 65320,
+              "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+              "html_url": "https://github.com/bwhite"
+            }
+          ],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "692d2d7a-24dc-4c6a-b88b-0178f4e99bfb",
+              "severity": "High",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/search/util/handler.py",
+              "line_number": 162,
+              "comment_created_at": "2025-07-04T23:04:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 492529,
+          "number": 110,
+          "title": "Implement database schema",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/auth-handler/pull/173",
+          "user": {
+            "login": "asmith",
+            "id": 59152,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-04T20:16:06.622597Z",
+          "additions": 144,
+          "deletions": 32,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 30735,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "32154910-d6cb-4ba7-9add-e2d512561aec",
+              "severity": "Medium",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/auth/util/proxy.py",
+              "line_number": 195,
+              "comment_created_at": "2025-07-06T08:55:06.622597Z"
+            }
+          ]
+        }
+      ],
+      "analytics": {
+        "total_prs": 10,
+        "open_prs_with_vulnerabilities": 5,
+        "risk_score": 66,
+        "vulnerability_counts": {
+          "Critical": 2,
+          "High": 6,
+          "Medium": 1,
+          "Low": 0
+        }
+      }
+    },
+    {
+      "id": 4315771,
+      "name": "auth-pipeline",
+      "full_name": "secure-corp/auth-pipeline",
+      "html_url": "https://github.com/secure-corp/auth-pipeline",
+      "private": false,
+      "pull_requests": [
+        {
+          "id": 498091,
+          "number": 101,
+          "title": "Improve caching layer",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/103",
+          "user": {
+            "login": "dev-lead",
+            "id": 51886,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-07T18:23:06.622597Z",
+          "additions": 368,
+          "deletions": 31,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 94725,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 15,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "3d4700cb-1d46-465e-adff-73a1a8d68c08",
+              "severity": "Critical",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/auth/util/core.py",
+              "line_number": 196,
+              "comment_created_at": "2025-07-07T20:42:06.622597Z"
+            },
+            {
+              "id": "9c7b458b-b271-4345-bf34-10a4badef49b",
+              "severity": "High",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/data/util/proxy.py",
+              "line_number": 195,
+              "comment_created_at": "2025-07-08T14:37:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 600355,
+          "number": 102,
+          "title": "Add API endpoint",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/124",
+          "user": {
+            "login": "jdoe",
+            "id": 35436,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-05T07:12:06.622597Z",
+          "additions": 214,
+          "deletions": 139,
+          "assignees": [],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "8284f4e1-a379-4f9d-b565-0274d508e77d",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/infra/util/engine.py",
+              "line_number": 16,
+              "comment_created_at": "2025-07-06T15:26:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 188266,
+          "number": 103,
+          "title": "Improve database schema",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/126",
+          "user": {
+            "login": "asmith",
+            "id": 75782,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-04T11:42:06.622597Z",
+          "additions": 248,
+          "deletions": 107,
+          "assignees": [
+            {
+              "login": "s-kim",
+              "id": 53445,
+              "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+              "html_url": "https://github.com/s-kim"
+            }
+          ],
+          "risk_score": 1,
+          "risk_level": "Low",
+          "security_analysis": [
+            {
+              "id": "d7dc0da1-c98c-493d-bea7-ef0eb6fbf052",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/auth/util/proxy.py",
+              "line_number": 182,
+              "comment_created_at": "2025-07-04T17:33:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 442156,
+          "number": 104,
+          "title": "Implement API endpoint",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/127",
+          "user": {
+            "login": "kblack",
+            "id": 19396,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-07T16:11:06.622597Z",
+          "additions": 115,
+          "deletions": 10,
+          "assignees": [
+            {
+              "login": "asmith",
+              "id": 34049,
+              "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+              "html_url": "https://github.com/asmith"
+            }
+          ],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "aa287a47-f0ab-4528-91a5-8e55cd349382",
+              "severity": "Medium",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/user/util/core.py",
+              "line_number": 92,
+              "comment_created_at": "2025-07-09T12:26:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 673295,
+          "number": 105,
+          "title": "Fix database schema",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/132",
+          "user": {
+            "login": "jdoe",
+            "id": 34228,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-03T16:09:06.622597Z",
+          "additions": 153,
+          "deletions": 108,
+          "assignees": [
+            {
+              "login": "r-chen",
+              "id": 19251,
+              "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+              "html_url": "https://github.com/r-chen"
+            }
+          ],
+          "risk_score": 15,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "8183c5af-9444-4ec2-94ab-08fe9b0bf460",
+              "severity": "Critical",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/data/util/service.py",
+              "line_number": 147,
+              "comment_created_at": "2025-07-05T05:40:06.622597Z"
+            },
+            {
+              "id": "f4eae1c2-84fb-47f6-9c90-414b8a82f912",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/infra/util/manager.py",
+              "line_number": 39,
+              "comment_created_at": "2025-07-03T22:37:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 361971,
+          "number": 106,
+          "title": "Fix API endpoint",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/138",
+          "user": {
+            "login": "dev-lead",
+            "id": 34097,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-07T02:38:06.622597Z",
+          "additions": 369,
+          "deletions": 61,
+          "assignees": [
+            {
+              "login": "s-kim",
+              "id": 20693,
+              "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+              "html_url": "https://github.com/s-kim"
+            }
+          ],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "f03cda07-7efe-48d7-85d8-e61924689196",
+              "severity": "High",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/data/util/manager.py",
+              "line_number": 138,
+              "comment_created_at": "2025-07-07T12:03:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 319923,
+          "number": 107,
+          "title": "Update API endpoint",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/140",
+          "user": {
+            "login": "asmith",
+            "id": 58493,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-02T22:55:06.622597Z",
+          "additions": 381,
+          "deletions": 172,
+          "assignees": [],
+          "risk_score": 4,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "8450db5b-968c-4e65-8122-fbf8731ee42d",
+              "severity": "Medium",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/payment/util/pipeline.py",
+              "line_number": 188,
+              "comment_created_at": "2025-07-03T19:32:06.622597Z"
+            },
+            {
+              "id": "4fc65f9e-95d3-4b92-9e7f-3af675311ce2",
+              "severity": "Medium",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/auth/util/proxy.py",
+              "line_number": 123,
+              "comment_created_at": "2025-07-03T14:53:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 645654,
+          "number": 108,
+          "title": "Refactor database schema",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/146",
+          "user": {
+            "login": "jdoe",
+            "id": 13181,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-07T02:58:06.622597Z",
+          "additions": 192,
+          "deletions": 200,
+          "assignees": [],
+          "risk_score": 20,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "b1e4f22b-3422-4f6a-813a-0bdb15c4176a",
+              "severity": "High",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/infra/util/manager.py",
+              "line_number": 112,
+              "comment_created_at": "2025-07-07T23:41:06.622597Z"
+            },
+            {
+              "id": "db4f8a04-1f5a-4838-b8ab-b690f9de193c",
+              "severity": "High",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/user/util/proxy.py",
+              "line_number": 38,
+              "comment_created_at": "2025-07-08T21:54:06.622597Z"
+            },
+            {
+              "id": "cd217c54-e7f8-413c-8517-4d4ae61f91ac",
+              "severity": "Critical",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/search/util/pipeline.py",
+              "line_number": 28,
+              "comment_created_at": "2025-07-08T16:52:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 714676,
+          "number": 109,
+          "title": "Implement login logic",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/153",
+          "user": {
+            "login": "s-kim",
+            "id": 73670,
+            "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+            "html_url": "https://github.com/s-kim"
+          },
+          "created_at": "2025-07-08T03:57:06.622597Z",
+          "additions": 245,
+          "deletions": 132,
+          "assignees": [
+            {
+              "login": "jdoe",
+              "id": 83187,
+              "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+              "html_url": "https://github.com/jdoe"
+            }
+          ],
+          "risk_score": 3,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "b6cc681e-46ba-4982-b33b-1f5e08a68700",
+              "severity": "Medium",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/infra/util/gateway.py",
+              "line_number": 12,
+              "comment_created_at": "2025-07-08T19:31:06.622597Z"
+            },
+            {
+              "id": "db19d10f-384b-49f6-b4a2-c38ec5e090b8",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/infra/util/service.py",
+              "line_number": 104,
+              "comment_created_at": "2025-07-09T06:05:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 350510,
+          "number": 110,
+          "title": "Improve user authentication",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/157",
+          "user": {
+            "login": "asmith",
+            "id": 44531,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-05T16:21:06.622597Z",
+          "additions": 177,
+          "deletions": 182,
+          "assignees": [],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "552d5fc9-4448-4ea5-bb1a-d27727486c83",
+              "severity": "Medium",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/payment/util/gateway.py",
+              "line_number": 95,
+              "comment_created_at": "2025-07-06T22:29:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 699320,
+          "number": 111,
+          "title": "Remove user authentication",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/161",
+          "user": {
+            "login": "jdoe",
+            "id": 88104,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-04T12:56:06.622597Z",
+          "additions": 107,
+          "deletions": 167,
+          "assignees": [],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 488045,
+          "number": 112,
+          "title": "Refactor login logic",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/auth-pipeline/pull/163",
+          "user": {
+            "login": "s-kim",
+            "id": 90879,
+            "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+            "html_url": "https://github.com/s-kim"
+          },
+          "created_at": "2025-07-05T12:51:06.622597Z",
+          "additions": 227,
+          "deletions": 147,
+          "assignees": [
+            {
+              "login": "kblack",
+              "id": 20292,
+              "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+              "html_url": "https://github.com/kblack"
+            }
+          ],
+          "risk_score": 11,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "3626b582-8e68-4695-b0fd-4588c4dfc639",
+              "severity": "Medium",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/search/util/service.py",
+              "line_number": 21,
+              "comment_created_at": "2025-07-05T23:16:06.622597Z"
+            },
+            {
+              "id": "9029d4b4-00eb-4362-96e0-006e10aaa3bc",
+              "severity": "Medium",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/notification/util/engine.py",
+              "line_number": 193,
+              "comment_created_at": "2025-07-06T23:59:06.622597Z"
+            },
+            {
+              "id": "2d2456a4-532c-4d18-bbe1-88f1208eacbe",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/notification/util/service.py",
+              "line_number": 27,
+              "comment_created_at": "2025-07-05T23:06:06.622597Z"
+            },
+            {
+              "id": "fc95d0f7-806f-4691-b847-1879c854af7e",
+              "severity": "Medium",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/infra/util/gateway.py",
+              "line_number": 106,
+              "comment_created_at": "2025-07-05T14:16:06.622597Z"
+            }
+          ]
+        }
+      ],
+      "analytics": {
+        "total_prs": 12,
+        "open_prs_with_vulnerabilities": 9,
+        "risk_score": 83,
+        "vulnerability_counts": {
+          "Critical": 3,
+          "High": 7,
+          "Medium": 5,
+          "Low": 2
+        }
+      }
+    },
+    {
+      "id": 5090863,
+      "name": "user-engine",
+      "full_name": "secure-corp/user-engine",
+      "html_url": "https://github.com/secure-corp/user-engine",
+      "private": false,
+      "pull_requests": [
+        {
+          "id": 172276,
+          "number": 101,
+          "title": "Refactor API endpoint",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/user-engine/pull/121",
+          "user": {
+            "login": "asmith",
+            "id": 35672,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-03T18:41:06.622597Z",
+          "additions": 153,
+          "deletions": 144,
+          "assignees": [],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "f1b48a44-d61a-404c-b795-93ec9fb49523",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/api/util/gateway.py",
+              "line_number": 103,
+              "comment_created_at": "2025-07-04T10:33:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 315794,
+          "number": 102,
+          "title": "Implement caching layer",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/user-engine/pull/123",
+          "user": {
+            "login": "s-kim",
+            "id": 90753,
+            "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+            "html_url": "https://github.com/s-kim"
+          },
+          "created_at": "2025-07-04T11:11:06.622597Z",
+          "additions": 402,
+          "deletions": 51,
+          "assignees": [
+            {
+              "login": "mgreen",
+              "id": 30393,
+              "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+              "html_url": "https://github.com/mgreen"
+            }
+          ],
+          "risk_score": 20,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "0f86f5e3-f0f8-46ee-b3e6-8b14a1c9ef4e",
+              "severity": "Critical",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/search/util/service.py",
+              "line_number": 21,
+              "comment_created_at": "2025-07-04T19:43:06.622597Z"
+            },
+            {
+              "id": "d997182b-3c05-4c4d-ae11-067327bd9af4",
+              "severity": "Critical",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/api/util/handler.py",
+              "line_number": 99,
+              "comment_created_at": "2025-07-06T07:28:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 347463,
+          "number": 103,
+          "title": "Refactor database schema",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/user-engine/pull/144",
+          "user": {
+            "login": "mgreen",
+            "id": 64932,
+            "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+            "html_url": "https://github.com/mgreen"
+          },
+          "created_at": "2025-07-03T18:19:06.622597Z",
+          "additions": 391,
+          "deletions": 189,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 93152,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 1,
+          "risk_level": "Low",
+          "security_analysis": [
+            {
+              "id": "dbc44cf7-b224-4d11-9ff6-c0397d1ede03",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/data/util/handler.py",
+              "line_number": 28,
+              "comment_created_at": "2025-07-04T03:49:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 861716,
+          "number": 104,
+          "title": "Improve login logic",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/user-engine/pull/156",
+          "user": {
+            "login": "mgreen",
+            "id": 67324,
+            "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+            "html_url": "https://github.com/mgreen"
+          },
+          "created_at": "2025-07-04T05:11:06.622597Z",
+          "additions": 466,
+          "deletions": 78,
+          "assignees": [],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "199840ba-904e-4141-aa3d-9f31dd35fa1a",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/payment/util/handler.py",
+              "line_number": 29,
+              "comment_created_at": "2025-07-05T04:02:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 634085,
+          "number": 105,
+          "title": "Fix caching layer",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/user-engine/pull/164",
+          "user": {
+            "login": "bwhite",
+            "id": 51732,
+            "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+            "html_url": "https://github.com/bwhite"
+          },
+          "created_at": "2025-07-05T16:41:06.622597Z",
+          "additions": 249,
+          "deletions": 122,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 98104,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        }
+      ],
+      "analytics": {
+        "total_prs": 5,
+        "open_prs_with_vulnerabilities": 1,
+        "risk_score": 31,
+        "vulnerability_counts": {
+          "Critical": 2,
+          "High": 0,
+          "Medium": 0,
+          "Low": 0
+        }
+      }
+    },
+    {
+      "id": 2071123,
+      "name": "notification-service",
+      "full_name": "secure-corp/notification-service",
+      "html_url": "https://github.com/secure-corp/notification-service",
+      "private": true,
+      "pull_requests": [
+        {
+          "id": 342152,
+          "number": 101,
+          "title": "Fix API endpoint",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/notification-service/pull/108",
+          "user": {
+            "login": "bwhite",
+            "id": 30565,
+            "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+            "html_url": "https://github.com/bwhite"
+          },
+          "created_at": "2025-07-05T23:33:06.622597Z",
+          "additions": 391,
+          "deletions": 111,
+          "assignees": [
+            {
+              "login": "r-chen",
+              "id": 65790,
+              "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+              "html_url": "https://github.com/r-chen"
+            }
+          ],
+          "risk_score": 10,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "5d0cd9c7-1dfa-4792-8276-1b949bc8a557",
+              "severity": "High",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/data/util/manager.py",
+              "line_number": 58,
+              "comment_created_at": "2025-07-07T01:06:06.622597Z"
+            },
+            {
+              "id": "66aac5a1-b15f-446f-80f5-e2638eeade6c",
+              "severity": "High",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/data/util/engine.py",
+              "line_number": 94,
+              "comment_created_at": "2025-07-07T20:37:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 195697,
+          "number": 102,
+          "title": "Refactor caching layer",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/notification-service/pull/112",
+          "user": {
+            "login": "bwhite",
+            "id": 41205,
+            "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+            "html_url": "https://github.com/bwhite"
+          },
+          "created_at": "2025-07-04T13:30:06.622597Z",
+          "additions": 342,
+          "deletions": 33,
+          "assignees": [
+            {
+              "login": "mgreen",
+              "id": 65797,
+              "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+              "html_url": "https://github.com/mgreen"
+            }
+          ],
+          "risk_score": 15,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "9f324441-a16d-4f59-895d-44af3d7d5db3",
+              "severity": "Critical",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/auth/util/gateway.py",
+              "line_number": 184,
+              "comment_created_at": "2025-07-05T07:35:06.622597Z"
+            },
+            {
+              "id": "bd6d0aa3-722b-41f5-a7bc-a51dfff86f37",
+              "severity": "High",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/auth/util/gateway.py",
+              "line_number": 100,
+              "comment_created_at": "2025-07-05T05:32:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 712955,
+          "number": 103,
+          "title": "Fix user authentication",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/notification-service/pull/134",
+          "user": {
+            "login": "dev-lead",
+            "id": 60430,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-07T16:36:06.622597Z",
+          "additions": 362,
+          "deletions": 50,
+          "assignees": [
+            {
+              "login": "bwhite",
+              "id": 27897,
+              "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+              "html_url": "https://github.com/bwhite"
+            }
+          ],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "0b25040c-c681-40f6-ac14-1ef683c7e207",
+              "severity": "Medium",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/user/util/manager.py",
+              "line_number": 133,
+              "comment_created_at": "2025-07-09T03:00:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 693547,
+          "number": 104,
+          "title": "Fix caching layer",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/notification-service/pull/135",
+          "user": {
+            "login": "s-kim",
+            "id": 34037,
+            "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+            "html_url": "https://github.com/s-kim"
+          },
+          "created_at": "2025-07-08T13:08:06.622597Z",
+          "additions": 12,
+          "deletions": 66,
+          "assignees": [
+            {
+              "login": "jdoe",
+              "id": 35929,
+              "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+              "html_url": "https://github.com/jdoe"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 213126,
+          "number": 105,
+          "title": "Add login logic",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/notification-service/pull/151",
+          "user": {
+            "login": "dev-lead",
+            "id": 90623,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-04T03:16:06.622597Z",
+          "additions": 484,
+          "deletions": 109,
+          "assignees": [],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 866047,
+          "number": 106,
+          "title": "Update user authentication",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/notification-service/pull/162",
+          "user": {
+            "login": "r-chen",
+            "id": 79928,
+            "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+            "html_url": "https://github.com/r-chen"
+          },
+          "created_at": "2025-07-07T16:17:06.622597Z",
+          "additions": 189,
+          "deletions": 130,
+          "assignees": [
+            {
+              "login": "bwhite",
+              "id": 76446,
+              "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+              "html_url": "https://github.com/bwhite"
+            }
+          ],
+          "risk_score": 12,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "78f20565-2b95-482a-a980-d6a29eb20329",
+              "severity": "Critical",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/payment/util/service.py",
+              "line_number": 68,
+              "comment_created_at": "2025-07-09T07:29:06.622597Z"
+            },
+            {
+              "id": "41185e42-e855-4012-9a38-e2597520fa2f",
+              "severity": "Medium",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/user/util/handler.py",
+              "line_number": 178,
+              "comment_created_at": "2025-07-09T11:46:06.622597Z"
+            }
+          ]
+        }
+      ],
+      "analytics": {
+        "total_prs": 6,
+        "open_prs_with_vulnerabilities": 1,
+        "risk_score": 39,
+        "vulnerability_counts": {
+          "Critical": 0,
+          "High": 2,
+          "Medium": 0,
+          "Low": 0
+        }
+      }
+    },
+    {
+      "id": 7388385,
+      "name": "data-proxy",
+      "full_name": "secure-corp/data-proxy",
+      "html_url": "https://github.com/secure-corp/data-proxy",
+      "private": false,
+      "pull_requests": [
+        {
+          "id": 182641,
+          "number": 101,
+          "title": "Remove database schema",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/105",
+          "user": {
+            "login": "s-kim",
+            "id": 13804,
+            "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+            "html_url": "https://github.com/s-kim"
+          },
+          "created_at": "2025-07-05T11:55:06.622597Z",
+          "additions": 132,
+          "deletions": 179,
+          "assignees": [
+            {
+              "login": "asmith",
+              "id": 93846,
+              "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+              "html_url": "https://github.com/asmith"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 123012,
+          "number": 102,
+          "title": "Implement API endpoint",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/106",
+          "user": {
+            "login": "jdoe",
+            "id": 34932,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-08T19:19:06.622597Z",
+          "additions": 445,
+          "deletions": 73,
+          "assignees": [
+            {
+              "login": "asmith",
+              "id": 12955,
+              "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+              "html_url": "https://github.com/asmith"
+            }
+          ],
+          "risk_score": 8,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "706bbad7-3dd7-4c70-ac26-7bf9b003612f",
+              "severity": "Low",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/auth/util/core.py",
+              "line_number": 80,
+              "comment_created_at": "2025-07-10T12:28:06.622597Z"
+            },
+            {
+              "id": "4a9e674a-2294-4c16-b28d-01c4ad760845",
+              "severity": "Medium",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/api/util/manager.py",
+              "line_number": 185,
+              "comment_created_at": "2025-07-10T06:43:06.622597Z"
+            },
+            {
+              "id": "1ed59acc-8726-49e1-8491-c4679f7c9f5b",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/payment/util/pipeline.py",
+              "line_number": 87,
+              "comment_created_at": "2025-07-10T01:32:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 303991,
+          "number": 103,
+          "title": "Update caching layer",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/111",
+          "user": {
+            "login": "mgreen",
+            "id": 64281,
+            "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+            "html_url": "https://github.com/mgreen"
+          },
+          "created_at": "2025-07-06T15:34:06.622597Z",
+          "additions": 237,
+          "deletions": 185,
+          "assignees": [
+            {
+              "login": "asmith",
+              "id": 26398,
+              "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+              "html_url": "https://github.com/asmith"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 106248,
+          "number": 104,
+          "title": "Improve API endpoint",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/120",
+          "user": {
+            "login": "s-kim",
+            "id": 18501,
+            "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+            "html_url": "https://github.com/s-kim"
+          },
+          "created_at": "2025-07-07T07:18:06.622597Z",
+          "additions": 251,
+          "deletions": 58,
+          "assignees": [],
+          "risk_score": 1,
+          "risk_level": "Low",
+          "security_analysis": [
+            {
+              "id": "f7f00368-a578-418e-a1c8-6e632f31da77",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/user/util/pipeline.py",
+              "line_number": 151,
+              "comment_created_at": "2025-07-08T16:39:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 682262,
+          "number": 105,
+          "title": "Implement API endpoint",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/125",
+          "user": {
+            "login": "asmith",
+            "id": 18944,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-07T22:03:06.622597Z",
+          "additions": 367,
+          "deletions": 107,
+          "assignees": [
+            {
+              "login": "bwhite",
+              "id": 81365,
+              "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+              "html_url": "https://github.com/bwhite"
+            }
+          ],
+          "risk_score": 10,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "4a00aa0e-a0c2-441c-b597-fdc70ea3bd21",
+              "severity": "High",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/user/util/core.py",
+              "line_number": 104,
+              "comment_created_at": "2025-07-08T00:40:06.622597Z"
+            },
+            {
+              "id": "b3ef963b-6c0f-4193-a39f-e3ee9bed2d68",
+              "severity": "Medium",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/data/util/service.py",
+              "line_number": 15,
+              "comment_created_at": "2025-07-09T12:27:06.622597Z"
+            },
+            {
+              "id": "e0453d0e-9ff9-4f24-8721-2037e413427b",
+              "severity": "Medium",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/api/util/pipeline.py",
+              "line_number": 26,
+              "comment_created_at": "2025-07-08T14:31:06.622597Z"
+            },
+            {
+              "id": "01e884b4-106e-4772-8dc2-02cb5666e317",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/auth/util/service.py",
+              "line_number": 24,
+              "comment_created_at": "2025-07-09T10:07:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 542340,
+          "number": 106,
+          "title": "Implement database schema",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/130",
+          "user": {
+            "login": "mgreen",
+            "id": 19233,
+            "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+            "html_url": "https://github.com/mgreen"
+          },
+          "created_at": "2025-07-04T18:16:06.622597Z",
+          "additions": 204,
+          "deletions": 121,
+          "assignees": [],
+          "risk_score": 11,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "5caa4981-a6c7-4d11-9209-46179bd92a50",
+              "severity": "Low",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/search/util/service.py",
+              "line_number": 136,
+              "comment_created_at": "2025-07-05T07:56:06.622597Z"
+            },
+            {
+              "id": "09584b97-3fbf-4533-a560-8adedf4e3bfd",
+              "severity": "Critical",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/notification/util/handler.py",
+              "line_number": 165,
+              "comment_created_at": "2025-07-06T04:12:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 548549,
+          "number": 107,
+          "title": "Implement caching layer",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/142",
+          "user": {
+            "login": "s-kim",
+            "id": 96941,
+            "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+            "html_url": "https://github.com/s-kim"
+          },
+          "created_at": "2025-07-04T10:35:06.622597Z",
+          "additions": 56,
+          "deletions": 33,
+          "assignees": [],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 420400,
+          "number": 108,
+          "title": "Update user authentication",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/143",
+          "user": {
+            "login": "asmith",
+            "id": 66389,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-03T00:24:06.622597Z",
+          "additions": 261,
+          "deletions": 110,
+          "assignees": [
+            {
+              "login": "kblack",
+              "id": 32552,
+              "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+              "html_url": "https://github.com/kblack"
+            }
+          ],
+          "risk_score": 1,
+          "risk_level": "Low",
+          "security_analysis": [
+            {
+              "id": "11bde499-9ca3-4eed-b9cf-453b71193982",
+              "severity": "Low",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/data/util/manager.py",
+              "line_number": 138,
+              "comment_created_at": "2025-07-04T10:11:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 817415,
+          "number": 109,
+          "title": "Remove login logic",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/145",
+          "user": {
+            "login": "mgreen",
+            "id": 12831,
+            "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+            "html_url": "https://github.com/mgreen"
+          },
+          "created_at": "2025-07-07T18:55:06.622597Z",
+          "additions": 448,
+          "deletions": 130,
+          "assignees": [
+            {
+              "login": "jdoe",
+              "id": 70839,
+              "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+              "html_url": "https://github.com/jdoe"
+            }
+          ],
+          "risk_score": 4,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "5d1c8b8c-b755-4209-b073-4fe1346e59e0",
+              "severity": "Low",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/search/util/core.py",
+              "line_number": 50,
+              "comment_created_at": "2025-07-09T16:00:06.622597Z"
+            },
+            {
+              "id": "8ad11310-caec-4229-b7f1-7b013431e71e",
+              "severity": "Medium",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/payment/util/engine.py",
+              "line_number": 86,
+              "comment_created_at": "2025-07-08T14:47:06.622597Z"
+            },
+            {
+              "id": "c5db2944-c17d-40c9-9434-d64c7c65a3f3",
+              "severity": "Low",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/infra/util/pipeline.py",
+              "line_number": 166,
+              "comment_created_at": "2025-07-09T07:39:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 422150,
+          "number": 110,
+          "title": "Remove caching layer",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/147",
+          "user": {
+            "login": "asmith",
+            "id": 57667,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-07T21:52:06.622597Z",
+          "additions": 410,
+          "deletions": 41,
+          "assignees": [
+            {
+              "login": "mgreen",
+              "id": 57429,
+              "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+              "html_url": "https://github.com/mgreen"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 464037,
+          "number": 111,
+          "title": "Implement caching layer",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/149",
+          "user": {
+            "login": "jdoe",
+            "id": 64538,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-04T11:41:06.622597Z",
+          "additions": 47,
+          "deletions": 144,
+          "assignees": [],
+          "risk_score": 1,
+          "risk_level": "Low",
+          "security_analysis": [
+            {
+              "id": "ac8ef3a5-0d63-4898-9ebb-7c384d7734ee",
+              "severity": "Low",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/api/util/proxy.py",
+              "line_number": 26,
+              "comment_created_at": "2025-07-05T00:15:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 776134,
+          "number": 112,
+          "title": "Remove user authentication",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/data-proxy/pull/170",
+          "user": {
+            "login": "dev-lead",
+            "id": 91974,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-06T22:44:06.622597Z",
+          "additions": 355,
+          "deletions": 170,
+          "assignees": [
+            {
+              "login": "jdoe",
+              "id": 42378,
+              "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+              "html_url": "https://github.com/jdoe"
+            }
+          ],
+          "risk_score": 7,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "65ea0059-1da5-4101-9343-d4f10224add4",
+              "severity": "Medium",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/auth/util/engine.py",
+              "line_number": 138,
+              "comment_created_at": "2025-07-07T03:40:06.622597Z"
+            },
+            {
+              "id": "1fdd6fa8-4af7-4cc9-9750-9ec64db6b1ba",
+              "severity": "Medium",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/auth/util/core.py",
+              "line_number": 12,
+              "comment_created_at": "2025-07-07T05:02:06.622597Z"
+            },
+            {
+              "id": "f19db25f-d5a8-4022-b551-380a8a611555",
+              "severity": "Low",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/user/util/gateway.py",
+              "line_number": 61,
+              "comment_created_at": "2025-07-07T16:53:06.622597Z"
+            },
+            {
+              "id": "e445034c-419d-4b57-a661-827681ca9e26",
+              "severity": "Medium",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/payment/util/engine.py",
+              "line_number": 55,
+              "comment_created_at": "2025-07-08T08:14:06.622597Z"
+            }
+          ]
+        }
+      ],
+      "analytics": {
+        "total_prs": 12,
+        "open_prs_with_vulnerabilities": 7,
+        "risk_score": 43,
+        "vulnerability_counts": {
+          "Critical": 1,
+          "High": 2,
+          "Medium": 6,
+          "Low": 7
+        }
+      }
+    },
+    {
+      "id": 7261543,
+      "name": "user-service",
+      "full_name": "secure-corp/user-service",
+      "html_url": "https://github.com/secure-corp/user-service",
+      "private": true,
+      "pull_requests": [
+        {
+          "id": 994652,
+          "number": 101,
+          "title": "Add caching layer",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/101",
+          "user": {
+            "login": "kblack",
+            "id": 84655,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-07T04:05:06.622597Z",
+          "additions": 205,
+          "deletions": 130,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 59301,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 11,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "175e5c6b-974f-4045-a7e9-0f00ac0590c0",
+              "severity": "Low",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/payment/util/pipeline.py",
+              "line_number": 136,
+              "comment_created_at": "2025-07-08T21:22:06.622597Z"
+            },
+            {
+              "id": "3000e616-55cf-47f4-913b-3b5fefdce615",
+              "severity": "Critical",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/data/util/engine.py",
+              "line_number": 37,
+              "comment_created_at": "2025-07-09T03:00:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 283338,
+          "number": 102,
+          "title": "Implement user authentication",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/107",
+          "user": {
+            "login": "kblack",
+            "id": 90596,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-05T03:56:06.622597Z",
+          "additions": 85,
+          "deletions": 44,
+          "assignees": [
+            {
+              "login": "jdoe",
+              "id": 27565,
+              "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+              "html_url": "https://github.com/jdoe"
+            }
+          ],
+          "risk_score": 1,
+          "risk_level": "Low",
+          "security_analysis": [
+            {
+              "id": "e24f9880-2761-4fcd-bf25-2daff7fa6b5e",
+              "severity": "Low",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/payment/util/service.py",
+              "line_number": 114,
+              "comment_created_at": "2025-07-06T13:36:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 538353,
+          "number": 103,
+          "title": "Remove database schema",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/113",
+          "user": {
+            "login": "dev-lead",
+            "id": 53906,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-08T16:36:06.622597Z",
+          "additions": 166,
+          "deletions": 137,
+          "assignees": [
+            {
+              "login": "bwhite",
+              "id": 80011,
+              "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+              "html_url": "https://github.com/bwhite"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 168196,
+          "number": 104,
+          "title": "Fix API endpoint",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/user-service/pull/115",
+          "user": {
+            "login": "jdoe",
+            "id": 15782,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-06T17:57:06.622597Z",
+          "additions": 363,
+          "deletions": 192,
+          "assignees": [
+            {
+              "login": "kblack",
+              "id": 34155,
+              "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+              "html_url": "https://github.com/kblack"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 202519,
+          "number": 105,
+          "title": "Update login logic",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/136",
+          "user": {
+            "login": "r-chen",
+            "id": 98398,
+            "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+            "html_url": "https://github.com/r-chen"
+          },
+          "created_at": "2025-07-03T16:20:06.622597Z",
+          "additions": 192,
+          "deletions": 156,
+          "assignees": [
+            {
+              "login": "bwhite",
+              "id": 73642,
+              "avatar_url": "https://i.pravatar.cc/150?u=bwhite",
+              "html_url": "https://github.com/bwhite"
+            }
+          ],
+          "risk_score": 11,
+          "risk_level": "High",
+          "security_analysis": [
+            {
+              "id": "1369b8bf-cd03-41fc-8c98-460a364bf8a1",
+              "severity": "Critical",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/payment/util/handler.py",
+              "line_number": 28,
+              "comment_created_at": "2025-07-04T15:50:06.622597Z"
+            },
+            {
+              "id": "b6e3fee4-0e2a-4a0a-bf40-a114c906b8d4",
+              "severity": "Low",
+              "vulnerability_type": "Insecure Deserialization",
+              "file_path": "src/auth/util/handler.py",
+              "line_number": 195,
+              "comment_created_at": "2025-07-05T15:18:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 814610,
+          "number": 106,
+          "title": "Refactor caching layer",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/137",
+          "user": {
+            "login": "r-chen",
+            "id": 11059,
+            "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+            "html_url": "https://github.com/r-chen"
+          },
+          "created_at": "2025-07-06T09:32:06.622597Z",
+          "additions": 294,
+          "deletions": 104,
+          "assignees": [],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "4809ee67-ef27-4d1b-803b-9ddf5f57a3f7",
+              "severity": "Medium",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/data/util/proxy.py",
+              "line_number": 135,
+              "comment_created_at": "2025-07-06T20:52:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 618899,
+          "number": 107,
+          "title": "Refactor login logic",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/141",
+          "user": {
+            "login": "mgreen",
+            "id": 82656,
+            "avatar_url": "https://i.pravatar.cc/150?u=mgreen",
+            "html_url": "https://github.com/mgreen"
+          },
+          "created_at": "2025-07-08T10:28:06.622597Z",
+          "additions": 65,
+          "deletions": 108,
+          "assignees": [],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "24643394-2b49-472b-b960-6dbeaeba2957",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/notification/util/proxy.py",
+              "line_number": 149,
+              "comment_created_at": "2025-07-10T08:04:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 801754,
+          "number": 108,
+          "title": "Add caching layer",
+          "state": "closed",
+          "resolution_status": "Resolved",
+          "html_url": "https://github.com/secure-corp/user-service/pull/152",
+          "user": {
+            "login": "asmith",
+            "id": 43573,
+            "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+            "html_url": "https://github.com/asmith"
+          },
+          "created_at": "2025-07-06T15:36:06.622597Z",
+          "additions": 376,
+          "deletions": 200,
+          "assignees": [],
+          "risk_score": 5,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "8203e005-9b86-4a59-9b36-40f8c97feb98",
+              "severity": "High",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/data/util/service.py",
+              "line_number": 98,
+              "comment_created_at": "2025-07-06T19:02:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 149810,
+          "number": 109,
+          "title": "Update database schema",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/165",
+          "user": {
+            "login": "kblack",
+            "id": 52702,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-08T05:35:06.622597Z",
+          "additions": 175,
+          "deletions": 161,
+          "assignees": [
+            {
+              "login": "asmith",
+              "id": 72921,
+              "avatar_url": "https://i.pravatar.cc/150?u=asmith",
+              "html_url": "https://github.com/asmith"
+            }
+          ],
+          "risk_score": 7,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "bf0fba13-004d-4875-ae93-11b0fc8978e2",
+              "severity": "High",
+              "vulnerability_type": "Sensitive Data Exposure",
+              "file_path": "src/infra/util/manager.py",
+              "line_number": 98,
+              "comment_created_at": "2025-07-09T02:51:06.622597Z"
+            },
+            {
+              "id": "a1345358-6556-491f-9a55-b78cac541b2e",
+              "severity": "Medium",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/user/util/proxy.py",
+              "line_number": 52,
+              "comment_created_at": "2025-07-08T15:16:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 744636,
+          "number": 110,
+          "title": "Refactor user authentication",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/166",
+          "user": {
+            "login": "s-kim",
+            "id": 18358,
+            "avatar_url": "https://i.pravatar.cc/150?u=s-kim",
+            "html_url": "https://github.com/s-kim"
+          },
+          "created_at": "2025-07-03T22:35:06.622597Z",
+          "additions": 359,
+          "deletions": 128,
+          "assignees": [
+            {
+              "login": "kblack",
+              "id": 30178,
+              "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+              "html_url": "https://github.com/kblack"
+            }
+          ],
+          "risk_score": 2,
+          "risk_level": "Medium",
+          "security_analysis": [
+            {
+              "id": "a0330556-1578-4b5c-a8f2-441132632b19",
+              "severity": "Medium",
+              "vulnerability_type": "Broken Authentication",
+              "file_path": "src/infra/util/service.py",
+              "line_number": 19,
+              "comment_created_at": "2025-07-05T08:30:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 408622,
+          "number": 111,
+          "title": "Update caching layer",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/168",
+          "user": {
+            "login": "jdoe",
+            "id": 96563,
+            "avatar_url": "https://i.pravatar.cc/150?u=jdoe",
+            "html_url": "https://github.com/jdoe"
+          },
+          "created_at": "2025-07-05T19:11:06.622597Z",
+          "additions": 307,
+          "deletions": 85,
+          "assignees": [
+            {
+              "login": "r-chen",
+              "id": 67494,
+              "avatar_url": "https://i.pravatar.cc/150?u=r-chen",
+              "html_url": "https://github.com/r-chen"
+            }
+          ],
+          "risk_score": 17,
+          "risk_level": "Critical",
+          "security_analysis": [
+            {
+              "id": "f257aaec-23c0-4254-a114-d01f06f8788a",
+              "severity": "Critical",
+              "vulnerability_type": "SQL Injection",
+              "file_path": "src/user/util/pipeline.py",
+              "line_number": 108,
+              "comment_created_at": "2025-07-06T07:25:06.622597Z"
+            },
+            {
+              "id": "eecddcf3-1f3f-4cfd-9fdb-61524a52d00d",
+              "severity": "High",
+              "vulnerability_type": "Command Injection",
+              "file_path": "src/api/util/manager.py",
+              "line_number": 12,
+              "comment_created_at": "2025-07-07T02:32:06.622597Z"
+            },
+            {
+              "id": "bf5e0b15-288e-4ddf-8c93-a6c8dedf65ff",
+              "severity": "Medium",
+              "vulnerability_type": "Cross-Site Scripting (XSS)",
+              "file_path": "src/user/util/manager.py",
+              "line_number": 47,
+              "comment_created_at": "2025-07-06T08:01:06.622597Z"
+            }
+          ]
+        },
+        {
+          "id": 816411,
+          "number": 112,
+          "title": "Add user authentication",
+          "state": "open",
+          "resolution_status": "Fix in Progress",
+          "html_url": "https://github.com/secure-corp/user-service/pull/171",
+          "user": {
+            "login": "dev-lead",
+            "id": 33464,
+            "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+            "html_url": "https://github.com/dev-lead"
+          },
+          "created_at": "2025-07-05T23:32:06.622597Z",
+          "additions": 331,
+          "deletions": 175,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 50119,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        },
+        {
+          "id": 614119,
+          "number": 113,
+          "title": "Remove database schema",
+          "state": "open",
+          "resolution_status": "Needs Review",
+          "html_url": "https://github.com/secure-corp/user-service/pull/174",
+          "user": {
+            "login": "kblack",
+            "id": 50709,
+            "avatar_url": "https://i.pravatar.cc/150?u=kblack",
+            "html_url": "https://github.com/kblack"
+          },
+          "created_at": "2025-07-04T02:19:06.622597Z",
+          "additions": 295,
+          "deletions": 46,
+          "assignees": [
+            {
+              "login": "dev-lead",
+              "id": 44283,
+              "avatar_url": "https://i.pravatar.cc/150?u=dev-lead",
+              "html_url": "https://github.com/dev-lead"
+            }
+          ],
+          "risk_score": 0,
+          "risk_level": "None",
+          "security_analysis": []
+        }
+      ],
+      "analytics": {
+        "total_prs": 13,
+        "open_prs_with_vulnerabilities": 8,
+        "risk_score": 61,
+        "vulnerability_counts": {
+          "Critical": 3,
+          "High": 3,
+          "Medium": 4,
+          "Low": 3
+        }
+      }
+    }
+  ]
+}
